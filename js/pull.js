@@ -1,6 +1,6 @@
-//file connecting the Data Portal API
+//file connecting the Data Portal API //$ Call for JQuery
 $.getJSON('http://data.cityofchicago.org/resource/8pix-ypme.json', function(lstops) {
-//$ Call for JQuery    
+    
 
     $.each(lstops, function(i, lstop){
         $('#lstoplist').append(generateLStopLink(lstop));
