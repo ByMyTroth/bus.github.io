@@ -11,7 +11,7 @@ $.getJSON('http://data.cityofchicago.org/resource/5cq6-qygt.json', function(Bsto
     
 });
 
-function generateLStopLink(Bstop){
+function generateBStopLink(Bstop){
     
     return'<li><a href="javascript:void(0)'
             + '"onclick="goToStopDetailPage(\''
