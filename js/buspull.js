@@ -1,24 +1,24 @@
 //file connecting the Data Portal API //$ Call for JQuery
-$.getJSON('http://data.cityofchicago.org/resource/5cq6-qygt.json', function(Bstops) {
+$.getJSON('http://data.cityofchicago.org/resource/5cq6-qygt.json', function(bstops) {
     
 
-    $.each(Bstops, function(i, Bstop){
-        $('#Bstoplist').append(generateLStopLink(Bstop));
+    $.each(bstops, function(i, bstop){
+        $('#bstoplist').append(generateLStopLink(bstop));
     
 });
     
-    $('#Bstoplist').listview('refresh');
+    $('#bstoplist').listview('refresh');
     
 });
 
-function generateBStopLink(Bstop){
+function generateBStopLink(bstop){
     
     return'<li><a href="javascript:void(0)'
             + '"onclick="goToStopDetailPage(\''
-            + Bstop.stop_name
+            + bstop.stop_name
             + '\', \''
-            + Bstop.station_descriptive_name + '\")">'
-            + Bstop.stop_name
+            + bstop.station_descriptive_name + '\")">'
+            + bstop.stop_name
             + '</a></li>';
 }
 
